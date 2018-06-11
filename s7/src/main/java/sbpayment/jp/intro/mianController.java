@@ -10,5 +10,15 @@ public class mianController {
 		return "index";
 	}
 	
+	@GetMapping("/Registration")
+	public String Registration() {
+		return "Registration";
+	}
+	
+	@GetMapping("/classification")
+	public String classification() {
+		return "classification";
+	}
+	
 }
 

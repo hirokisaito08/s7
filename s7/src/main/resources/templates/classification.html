@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+ "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja-JP">
+<head>
+  <meta charset="UTF-8">
+内訳！！！
+<meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script type="text/javascript">
+var num = 1;
+function add(button){
+var a = document.getElementById('test_' + (++num));
+a.style.display = 'block';
+if (num == 20) button.disabled = true;
+}
+</script>
+</head>
+<body>
+<div id="test_1">
+  項目1<input type="text">
+  金額<input type="number">
+</div>
+<div id="test_2" style="display:none">
+  項目2<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_3" style="display:none">
+  項目3<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_4" style="display:none">
+  項目4<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_5" style="display:none">
+  項目5<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_6" style="display:none">
+  項目6<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_7" style="display:none">
+  項目7<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_8" style="display:none">
+  項目8<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_9" style="display:none">
+  項目9<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_10" style="display:none">
+  項目10<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_11" style="display:none">
+  項目11<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_12" style="display:none">
+  項目12<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_13" style="display:none">
+  項目13<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_14" style="display:none">
+  項目14<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_15" style="display:none">
+  項目15<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_16" style="display:none">
+  項目16<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_17" style="display:none">
+  項目17<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_18" style="display:none">
+  項目18<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_19" style="display:none">
+  項目19<input type="text">
+    金額<input type="number">
+</div>
+<div id="test_20" style="display:none">
+  項目20<input type="text">
+    金額<input type="number">
+</div>
+<input type="button" onclick="add(this);" value="項目追加">
+
+<input type="button" onclick="history.back();" value="戻る">
+
+</body>
+</html>

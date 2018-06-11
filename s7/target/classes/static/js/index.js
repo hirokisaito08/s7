@@ -54,11 +54,7 @@ DLYCalendar.prototype.create = function() {
 	}	
 	.bind(this));
 };
-
-//////////////////
-document.getElementById("text-button").onclick = function() {
-	  document.getElementById("text").innerHTML = "クリックされた！";
-	};///////////////
+/*
 
 
 /***

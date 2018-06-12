@@ -49,7 +49,17 @@ DLYCalendar.prototype.create = function() {
 			var elt1 = document.getElementById("selday");
 			elt.textContent = this.month+1;			
 			elt1.textContent = this.days[idx];
-			//location.href = '/s5/src/main/resources/templates/index.html' ;/////ページ遷移　シングルこーてしょん？ダブルコーテーション？
+			var elt2 = document.getElementByName;//6/12
+			var elt3 = document.getElementByName;//6/12
+			elt2.Value = this.month+1;//
+			elt3.Value = this.days[idx];//
+			
+			// 値を設定
+			document.getElementById("elt4").value = this.month+1;///6/12
+
+			// 値を取得
+			var str = document.getElementById("elt4").value///6/12
+			document.getElementById("sp2").innerHTML = str; //6/12 表示
 		}
 	}	
 	.bind(this));

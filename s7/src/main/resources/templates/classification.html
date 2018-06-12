@@ -16,6 +16,7 @@ if (num == 20) button.disabled = true;
 </script>
 </head>
 <body>
+<form method ="post" th:action="@{/post}">
 <div id="test_1">
   項目1<input type="text">
   金額<input type="number">
@@ -93,9 +94,12 @@ if (num == 20) button.disabled = true;
     金額<input type="number">
 </div>
 <div id="test_20" style="display:none">
-  項目20<input type="text">
-    金額<input type="number">
-</div>
+項目20<input type="text">
+  金額<input type="number">
+  </div>
+<input type="submit">
+</form>
+
 <input type="button" onclick="add(this);" value="項目追加">
 
 <input type="button" onclick="history.back();" value="戻る">

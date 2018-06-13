@@ -20,17 +20,32 @@ public class mianController {
     private JdbcTemplate jdbc;
 
 	
-	@PostMapping("/post")
-	public String Post(String id, String reason, int acc, RedirectAttributes attr){
-	attr.addAttribute("id", id);
-	attr.addAttribute("reason", reason);
-	attr.addAttribute("acc", acc);
+	
 
-	   
-	jdbc.update("INSERT INTO accumulation (id,reason,acc) VALUES (?,?,?)",id,reason,acc);
-	  
-	   
-	   return "redirect:/index";
+
+
+//	@PostMapping("/classification")
+//	public String Post(int id,String reason, int acc, RedirectAttributes attr){
+//		attr.addAttribute("id", id);
+//		attr.addAttribute("reason", reason);
+//		attr.addAttribute("acc", acc);
+//			jdbc.update("INSERT INTO accumulation (id,reason,acc) VALUES (?,?,?)",id,reason,acc);
+//	attr.addFlashAttribute("data",jdbc.queryForList("SELECT * FROM accumulation"));
+//	
+//	   return "redirect:/classification";
+//	}
+	
+	@PostMapping("/classification")
+	public String Post(int id[],String reason[], int acc[], RedirectAttributes attr){
+		for(int i=0;i<id.length;i++) {
+		//attr.addAttribute("id", id);
+		//attr.addAttribute("reason", reason);
+		//attr.addAttribute("acc", acc);
+		jdbc.update("INSERT INTO accumulation (id,reason,acc) VALUES (?,?,?)",id[i],reason[i],acc[i]);
+		//attr.addFlashAttribute("data",jdbc.queryForList("SELECT * FROM accumulation"));
+	
+		}
+	return "redirect:/classification";
 	}
 	
 	

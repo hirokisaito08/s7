@@ -18,7 +18,7 @@ CREATE TABLE spending (
 );
 
 CREATE TABLE accumulation (  
-    id INT,
+    id INT AUTO_INCREMENT,
     reason CHAR,
     acc INT
 );

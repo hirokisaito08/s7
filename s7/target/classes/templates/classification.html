@@ -21,15 +21,14 @@ if (num == 20) button.disabled = true;
 <div></div>
 
 
-<input type ="hidden" name="id" value="1" >
+
 項目1<input type="text"name="reason">
 金額<input type="number"name="acc">
 
 <div></div>
-<input type ="hidden" name="id" value="2" >
+
 項目2<input type="text"name="reason">
 金額<input type="text"name="acc">
-
 <input type="submit"><!--  -->
 
 
@@ -38,8 +37,16 @@ if (num == 20) button.disabled = true;
 </form>
 
 <input type="button" onclick="add(this);" value="項目追加">
-
+ <input type="button" value="表示" onclick="location.href='./print'">
 <input type="button" onclick="history.back();" value="戻る">
 
+
+<!-- 
+<table border="1">
+<tr><span th:each=“accumulation:${data}”></span> 
+<td><span th:text="${accumulation.id}"></span>id</td>
+</tr>
+</table>
+-->
 </body>
 </html>

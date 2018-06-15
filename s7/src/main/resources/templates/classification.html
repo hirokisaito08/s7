@@ -11,42 +11,51 @@ var num = 1;
 function add(button){
 var a = document.getElementById((++num));
 a.style.display = 'block';
-if (num == 20) button.disabled = true;
+if (num == 4) button.disabled = true;
 }
 </script>
 </head>
 <body>
 <form method ="post" th:action="@{/classification}">
 <!--  <form action="" method="post"> -->
-<div></div>
 
-
-
+<label>
+<div id=1 >
 項目1<input type="text"name="reason">
 金額<input type="number"name="acc">
+</div>
+</label>
 
-<div></div>
-
+<label>
+<div id=2 style="display: none;">
 項目2<input type="text"name="reason">
-金額<input type="text"name="acc">
-<input type="submit"><!--  -->
+金額<input type="number"name="acc">
+</div>
+</label>
 
+</label>
+<label>
+<div id=3 style="display: none;">
+項目3<input type="text"name="reason">
+金額<input type="number"name="acc">
+</div>
+</label>
 
+</label>
+<label>
+<div id=4 style="display: none;">
+項目4<input type="text"name="reason">
+金額<input type="number"name="acc">
+</div>
+</label>
 
+<input type="submit">
 
 </form>
-
 <input type="button" onclick="add(this);" value="項目追加">
  <input type="button" value="表示" onclick="location.href='./print'">
 <input type="button" onclick="history.back();" value="戻る">
 
 
-<!-- 
-<table border="1">
-<tr><span th:each=“accumulation:${data}”></span> 
-<td><span th:text="${accumulation.id}"></span>id</td>
-</tr>
-</table>
--->
 </body>
 </html>

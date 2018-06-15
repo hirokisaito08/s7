@@ -36,12 +36,17 @@ public class mianController {
 //	}
 	
 	@PostMapping("/classification")
-	public String Post(String reason[], int acc[], RedirectAttributes attr){
+	public String Post(String reason[], String acc[], RedirectAttributes attr){
+		System.out.println(reason.length);
 		for(int i=0;i<reason.length;i++) {
 //		attr.addAttribute("sreaon", reason);
 //		attr.addAttribute("acc", acc);
-		jdbc.update("INSERT INTO accumulation (reason,acc) VALUES (?,?)",reason[i],acc[i]);
-//		attr.addFlashAttribute("data",jdbc.queryForMap("SELECT * FROM accumulation"));
+		System.out.println(reason[i]);
+		if(acc[i].equals(null) != true && acc[i].isEmpty() != true) {
+			
+			jdbc.update("INSERT INTO accumulation (reason,acc) VALUES (?,?)",reason[i],Integer.valueOf(acc[i]));
+//			attr.addFlashAttribute("data",jdbc.queryForMap("SELECT * FROM accumulation"));
+		}
 		}
 	return "redirect:/classification";
 	}
